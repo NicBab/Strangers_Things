@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link href="style.css" rel="stylesheet"/>
+    <title>Market_Place</title>
+</head>
+
+
+<header>
+  <!--Hamburger Dropdown-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Marketplace App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  MENU
+                </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                  <li><a class="dropdown-item" id="Home" href="#1" data-link-to="1">Home</a></li>
+                  <li><a class="dropdown-item" id="Sign-Up" href="#2" data-link-to="2">Sign-Up</a></li>
+                  <li><a class="dropdown-item" id="Log-In" href="#3" data-link-to="3">Log-In</a></li>
+                  <li><a class="dropdown-item" id="Sell an Item" href="#4" data-link-to="4">Sell an Item</a></li>
+                  <li><a class="dropdown-item" id="Item Posts" href="#5" data-link-to="5">Item Posts</a></li>
+                  <li><a class="dropdown-item" id="My Messages" href="#6" data-link-to="6">My Messages</a></li>
+                  <li><a class="dropdown-item" id="Log-Out" href="#7" data-link-to="1">Log-Out</a></li>
+                  <!--<li><a class="dropdown-item" id="shopping Cart" href="#7" data-link-to="7"><i class="material-icons">shopping_cart</i>Shopping Cart</a></li> -->
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <!--Search Bar-->
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <form class="d-flex">
+            <input class="form-control me-2" id="search-bar-input" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" id="search-bar-btn" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+</header>
+
+
+<body>
+  <h1></h1>
+   <main class="content">
+
+  <!--HOME PAGE INFO-->
+      <section data-section="1" class="active">
+        <h2>Home Page</h2>
+        <p>Hello! Welcome to my marketplace web app.
+          After completing the sign up form from the dropdown menu...
+          you can login to post your junk or goods to buy and sell.
+          Search keywords, delete and edit your own posts.<br/>
+          Be sure to log out!
+        </p>
+      </section>
+
+  <!--Sign-UP Form-->
+      <section data-section="2">
+        <h2>Sign-Up</h2>
+        <form id="sign-up-form" class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">First name</label>
+            <input type="text" class="form-control" id="validationCustom01">
+            <div class="valid-feedback">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="validationCustom02">
+            <div class="valid-feedback">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustomUsername" class="form-label">Username</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input type="text" class="form-control" id="inputUsernameRegister" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPasswordRegister">
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" id="register-btn" type="submit">Submit form</button>
+          </div>
+        </form>
+      </section>
+
+  <!--Log-In form-->
+      <section data-section="3">
+        <h2>Log-In</h2>
+          <form id="log-in-form">
+            <div class="col-md-4">
+              <label for="validationCustomUsername" class="form-label">Username</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" class="form-control" id="inputUsernameLogin" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPasswordLogin">
+            </div>
+            <button type="submit" class="btn btn-primary" id="log-in-btn">Submit</button>
+          </form>
+      </section>
+
+  <!--Post an Item for Sale-->
+      <section data-section="4">
+        <h2>Sell an Item</h2>
+        <form id="sell-item-form">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Title</label>
+            <textarea class="form-control post-title" id="exampleFormControlTextarea1" rows="1"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea class="form-control post-description" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <span class="input-group-text">0.00</span>
+            <input type="text" class="form-control post-price" aria-label="Dollar amount (with dot and two decimal places)">
+          </div>
+          <div>
+            <button id="sell-item-btn" type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </section>
+
+  <!-- Item Posts -->
+      <section data-section="5">
+        <h2>Item Posts<h2></h2>
+        <div id="items-post">
+        </div>
+      </section>
+
+  <!--My Messages-->
+      <section data-section="6">
+        <h2>My Messages<h2></h2>
+        <div id="my-messages">
+        </div>
+      </section>
+
+  <!--Log-Out-->
+      <section data-section="7">
+        <h2>Logged-Out</h2>
+      </section>
+  </main>
+
+  <!--JS & Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="app.js"></script>
+    <script defer src="register.js"></script>
+    <script defer src="login-logout.js"></script>
+    <script defer src="user-data-me.js"></script>
+    <script defer src="fetch-render-posts.js"></script>
+    <script defer src="sell-item-post.js"></script>
+    <script defer src="delete-post.js"></script>
+    <script defer src="edit-post.js"></script>
+    <script defer src="send-message.js"></script>
+</body>
+
+    <footer>
+        <section>
+          <h2>Customer Care</h2>
+          <a href="">Account</a>
+          <a href="">Orders</a>
+          <a href="">Policies</a>
+          <a href="">Credit</a>
+          <a href="">Help</a>
+        </section>
+
+        <section>
+          <h2>Sales</h2>
+          <a href="">Become a Seller</a>
+          <a href="">Manage Your Products</a>
+          <a href="">Advertise</a>
+        </section>
+
+        <section>
+          <h2>About Us</h2>
+          <a href="">Careers</a>
+          <a href="">Blog</a>
+          <a href="">Our History</a>
+          <a href="">Press Releases</a>
+          <a href="">Take a Tour</a>
+        </section>
+     </footer>
+</html>
+
+
+
+
+
+
+        <!-- <button type="button" class="btn btn-primary btn-sm" id="home-register-btn">Register</button>
+        <button type="button" class="btn btn-secondary btn-sm" id="home-login-btn">Login</button> -->
+
+   <!-- <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+
+                <!-- <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div> -->
+
+
+             <!-- <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">City</label>
+            <input type="text" class="form-control" id="validationCustom03" required>
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">State</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">Choose...</option>
+              <option>...</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid state.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="validationCustom05" required>
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div> -->
+
+           <!-- <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01">Upload Photo</label>
+            <input type="file" class="form-control post-photo" id="inputGroupFile01">
+          </div> -->
