@@ -1,6 +1,6 @@
-
 async function deletePost(postId) {
     try {
+        const userToken = localStorage.getItem("token")
         const response = await fetch (`${BASE_URL}/posts/${postId}`, {
             method: "DELETE",
             headers: {
@@ -15,39 +15,15 @@ async function deletePost(postId) {
     }
 };
 
-$('#delete-button').on('click', async function () {
-    console.log("hi")
-    const postElement = $(this).closest('.post');
+$('#items-post').on('click', "#delete-button", async function () {
+    
+    const postElement = $(this).closest('.card');
     const post = postElement.data('post');
-
     try {
-        const result = await remove(post.id);
+        const result = await deletePost(post._id);
         postElement.slideUp()
+
     } catch(error) {
       console.error(error)
     }
 });
-
-// $("#delete-button").on("click", function(e) {
-//     e.preventDefault
-//     console.log(hi)
-// })
-
-
-
-// $('#edit-post').show();
-
-// async function deletePost(postId) {
-//     const url = `${BASE_URL}/posts/${postId}`;
-//     fetch(url, {
-//         method: "DELETE",
-//         headers: {
-//             'Content-Type': 'application/json',
-//             'Authorization': `Bearer ${userToken}`
-//         }
-//     }) .then(response => response.json())
-//         .then(result => {
-//         console.log(result);
-//     })
-//     .catch(console.error);
-// }
